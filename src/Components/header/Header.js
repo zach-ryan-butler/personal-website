@@ -8,8 +8,8 @@ import HeaderButtons from './HeaderButtons';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    justifyContent: 'space-between',
-    padding: '1em'
+    justifyContent: "space-between",
+    padding: "1em"
   }
 }));
 
@@ -25,9 +25,9 @@ export default function Header() {
   return (
     <AppBar position="sticky">
       <Toolbar className={classes.root} variant="dense">
-        <Typography variant="h5" color="inherit">
-          Zach Butler / software engineer
-        </Typography>
+          <Typography variant="h5" color="inherit">
+            Zach Butler / software engineer
+          </Typography>
         <HeaderButtons handleClick={handleClick}/>
       </Toolbar>
     </AppBar>
