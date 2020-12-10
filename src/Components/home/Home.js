@@ -13,13 +13,12 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Divider from '@material-ui/core/Divider';
 import MyImg from './IMG_4884 copy.png';
 import Button from '@material-ui/core/Button';
+import { useHistory } from 'react-router-dom'
 
 const useStyles = makeStyles({
   container: {
     display: 'flex',
-    justifyContent: 'center',
-    marginTop: '20vh',
-    marginBottom: '20vh'
+    justifyContent: 'center'
   },
   gridItem: {
     display: 'flex'
@@ -29,7 +28,9 @@ const useStyles = makeStyles({
     flexDirection: 'column',
     justifyContent: 'space-around',
     alignItems: 'center',
-    width: '100%'
+    width: '100%',
+    marginTop: '10vh',
+    marginBottom: '10vh'
   },
   media: {
     height: '250px',
@@ -47,6 +48,12 @@ const useStyles = makeStyles({
 
 export default function Home() {
   const classes = useStyles();
+
+  let history = useHistory();
+
+  const handleClick = pathURL => {
+    history.push(pathURL);
+  }
 
   return (
     <Grid container className={classes.container}>
@@ -95,8 +102,8 @@ export default function Home() {
             </Typography>
           </CardContent>
           <CardActions>
-            <Button variant="contained" color="primary">Experience</Button>
-            <Button variant="contained" color="primary">Contact</Button>
+            <Button variant="contained" color="secondary" onClick={() => handleClick('/experience')}>Experience</Button>
+            <Button variant="contained" color="secondary" onClick={() => handleClick('/contact')}>Contact</Button>
           </CardActions>
           <CardContent>
             <Typography align="center">

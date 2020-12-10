@@ -10,14 +10,14 @@ import Experience from './experience/Experience';
 
 function App() {
   return (
-    <Router>
-      <Header />
-      <Switch>
-        <Route path="/experience" component={Experience} />
-        <Route path="/contact" component={Contact} />
-        <Route path="/" component={Home} />
-      </Switch>
-    </Router>
+      <Router>
+        <Header />
+          <Switch>
+            <Route path="/experience" component={Experience} />
+            <Route path="/contact" component={Contact} />
+            <Route path="/" component={Home} />
+          </Switch>
+      </Router>
   );
 }
 

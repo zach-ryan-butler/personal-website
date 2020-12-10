@@ -5,9 +5,9 @@ import Button from '@material-ui/core/Button';
 function HeaderButtons({ handleClick }) {
   return (
     <section>
-      <Button onClick={() => handleClick('/')}>Home</Button>
-      <Button onClick={() => handleClick('/experience')}>Experience</Button>
-      <Button onClick={() => handleClick('/contact')}>Contact</Button>
+      <Button color="secondary" onClick={() => handleClick('/')}>Home</Button>
+      <Button color="secondary" onClick={() => handleClick('/experience')}>Experience</Button>
+      <Button color="secondary" onClick={() => handleClick('/contact')}>Contact</Button>
     </section>
   )
 }
